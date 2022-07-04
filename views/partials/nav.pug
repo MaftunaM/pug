@@ -1,0 +1,16 @@
+nav
+    .nav-wrapper
+        a.brand-logo(href='/') Online Lessons
+        ul#nav-mobile.right.hide-on-med-and-down
+            if isLesson
+                li
+                    a(href='/api/lessons' style="color: blue;") All lessons
+            else
+                li
+                    a(href='/api/lessons') All lessons
+            if isAdd 
+                li
+                    a(href='/api/lessons/add' style="color: blue;") Add lesson
+            else 
+                li
+                    a(href='/api/lessons/add') Add lesson       
